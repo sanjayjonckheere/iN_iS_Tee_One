@@ -22,7 +22,7 @@ Thus, the output of a given layer consist of so-called _feature maps_: different
 
 <img width="780" alt="styleBank" src="https://user-images.githubusercontent.com/72076380/111777100-bce6eb00-88aa-11eb-9719-8a1fd3352655.png">
 
-So a feature map is the output of 1 filter applied to the previous layer. A given filter is drawn across the entire previous layer, moved 1 pixel at a time. Each position results in an activation of the neuron and the output is collected in the feature map
+So a feature map is the output of 1 filter applied to the previous layer. A given filter is drawn across the entire previous layer, moved 1 pixel at a time. Each position results in an activation of the neuron and the output is collected in the feature map.
 
 
 
