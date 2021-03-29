@@ -74,14 +74,14 @@ def deprocess_image(x):
     x = x.reshape((img_nrows, img_ncols, 3))
 ```
 
-**Remove zero-center by mean pixel.**
+**Remove zero-centre by mean pixel.**
 
-Zero-centering = shifting the values of the distribution to set the mean = 0. Removing zero-center by mean pixel is a common practise to improve accuracy.
+Zero-centring = shifting the values of the distribution to set the mean = 0. Removing zero-centre by mean pixel is a common practise to improve accuracy.
 
-> [Caffe: will convert the images from RGB to BGR and then will zero-center each colour channel with respect to the ImageNet dataset without scaling.](
+> [Caffe: will convert the images from RGB to BGR and then will zero-centre each colour channel with respect to the ImageNet dataset without scaling.](
 https://github.com/keras-team/keras-applications/blob/master/keras_applications/imagenet_utils.py)
 
-103.939, 116.779 and 123.68 are the mean values for zero-centering (constants from the ImageNet database). 
+VGG19 is trained with each channel normalised by mean = [103.939, 116.779, 123.68]. These are the constants to use when working with this network.
 
 ```py
     x[:, :, 0] += 103.939
@@ -113,6 +113,10 @@ As commented in the code by Mr. Chollet.
 ![1*HeCcGpmxWZFibgLiZCutag](https://user-images.githubusercontent.com/72076380/111915455-abead500-8a76-11eb-88cf-a50f8b6270c2.png)
 
 Transpose: In linear algebra, the transpose of a matrix is an operator which flips a matrix over its diagonal; that is, it switches the row and column indices of the matrix A by producing another matrix, often denoted by Aᵀ.
+
+Why does the Gram matrix represent artistic style? This is explained in the paper [Demystifying Neural Style Transfer](https://arxiv.org/pdf/1701.01036.pdf) proposed by Yanghao Li, Naiyan Wang, Jiaying Liu and Xiaodi Hou in 2017.
+
+>We theoretically prove that matching the Gram matrices of the neural activations can be seen as minimising a specific Maximum Mean Discrepancy (MMD) [Gretton et Aal., 2012a]. This re- veals that neural style transfer is intrinsically a process of distribution alignment of the neural activations between images.
 
 ```py
 def gram_matrix(x):
