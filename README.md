@@ -369,7 +369,7 @@ for i in range(1, iterations + 1):
 
 
 
-**Introduction to Tensors:**
+**Tensors:**
 
 * [Introduction to Tensors](https://www.tensorflow.org/guide/tensor)
 
