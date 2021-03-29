@@ -75,7 +75,6 @@ def deprocess_image(x):
 ```
 
 **Remove zero-centre by mean pixel.**
-
 Zero-centring = shifting the values of the distribution to set the mean = 0. Removing zero-centre by mean pixel is a common practise to improve accuracy.
 
 > [Caffe: will convert the images from RGB to BGR and then will zero-centre each colour channel with respect to the ImageNet dataset without scaling.](
