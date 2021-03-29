@@ -76,12 +76,12 @@ def deprocess_image(x):
 
 **Remove zero-center by mean pixel.**
 
-Zero-centering = shifting the values of the distribution to set the mean = 0.
+Zero-centering = shifting the values of the distribution to set the mean = 0. Removing zero-center by mean pixel is a common practise to improve accuracy.
+
 > [Caffe: will convert the images from RGB to BGR and then will zero-center each colour channel with respect to the ImageNet dataset without scaling.](
 https://github.com/keras-team/keras-applications/blob/master/keras_applications/imagenet_utils.py)
 
-
-103.939, 116.779 and 123.68 are the mean values for zero-centering. In de-processing we have to convert it back to 'RGB'
+103.939, 116.779 and 123.68 are the mean values for zero-centering (constants from the ImageNet database). 
 
 ```py
     x[:, :, 0] += 103.939
@@ -92,9 +92,9 @@ https://github.com/keras-team/keras-applications/blob/master/keras_applications/
 **'BGR'->'RGB'**  
 R(ed)G(reen)B(lue) is the colour model for the sensing, representation, and display of images.  These are the primary colours of light (although light itself is an electromagnetic wave and colourless) and maximises the range perceived by the eyes and brain. Because we are working with screens that emit light instead of pigments, we use RGB.
 
-The model formats the input image as batch size, channels, height and width as a NumPy-array in the form of BGR. Because VGG19 makes use of the ImageNet dataset which uses BGR we set it back to the original, therefore 'BGR'→'RGB' or x = x[:, :, ::-1].
+The model formats the input image as batch size, channels, height and width as a NumPy-array in the form of BGR. Because VGG19 makes use of the ImageNet dataset  which uses BGR we set it back to the original, therefore 'BGR'→'RGB' or x = x[:, :, ::-1]. The reason ImageNet uses BGR is (as written above) because it 
 
-Clip the interval edges to 0 and 255. Red, green and blue use 8 bits each, and they have integer values ranging from 0 to 255. 256³ = 16777216 possible colours. The date type = uint8 = Unsigned Integers of 8 bits (there are only 8 bits of information).
+Clip the interval edges to 0 and 255 otherwise we may pick values between −∞ and +∞.  Red, green and blue use 8 bits each, and they have integer values ranging from 0 to 255. 256³ = 16777216 possible colours. The date type = uint8 = Unsigned Integers of 8 bits (there are only 8 bits of information). Unsigned integers are integers without a "-" or "+" assigned to them. They are always non-negative (0 or positive) and we use them if we know that the outcome will always be non-negative.
 ```py
     x = x[:, :, ::-1]
     x = np.clip(x, 0, 255).astype("uint8")
