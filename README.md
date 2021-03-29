@@ -104,7 +104,7 @@ Clip the interval edges to 0 and 255. Red, green and blue use 8 bits each, and t
 ## **▻ Compute the style transfer loss**
 The loss/cost is the difference between the original and the generated image.  We can calculate this in different ways (MSE, Euclidean distance, etc.). By minimising the differences of the images we are able to transfer style.
 
-As commented in the code by MR. Chollet.
+As commented in the code by Mr. Chollet.
 >The "style loss" is designed to maintain the style of the reference image in the generated image.  It is based on the gram matrices (which capture style) of >feature maps from the style reference image and from the generated image
 >First, we need to define 4 utility functions:
 
