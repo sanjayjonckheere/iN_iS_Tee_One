@@ -116,7 +116,7 @@ Transpose: In linear algebra, the transpose of a matrix is an operator which fli
 
 Why does the Gram matrix represent artistic style? This is explained in the paper [Demystifying Neural Style Transfer](https://arxiv.org/pdf/1701.01036.pdf) proposed by Yanghao Li, Naiyan Wang, Jiaying Liu and Xiaodi Hou in 2017.
 
->We theoretically prove that matching the Gram matrices of the neural activations can be seen as minimising a specific Maximum Mean Discrepancy (MMD) [Gretton et Aal., 2012a]. This re- veals that neural style transfer is intrinsically a process of distribution alignment of the neural activations between images.
+>We theoretically prove that matching the Gram matrices of the neural activations can be seen as minimising a specific Maximum Mean Discrepancy (MMD) [Gretton et Aal., 2012a]. This reveals that neural style transfer is intrinsically a process of distribution alignment of the neural activations between images.
 
 ```py
 def gram_matrix(x):
