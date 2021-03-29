@@ -330,7 +330,9 @@ for i in range(1, iterations + 1):
 
 **Neural Style Transfer:**
 
-* [A Neural Algorithm of Artistic Style by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge](https://arxiv.org/pdf/1508.06576.pdf)
+* [A Neural Algorithm of Artistic Style by Leon A. Gatys, Alexander S. Ecker and Matthias Bethge](https://arxiv.org/pdf/1508.06576.pdf)
+
+* [Demystifying Neural Style Transfer by Yanghao Li, Naiyan Wang, Jiaying Liu and Xiaodi Hou](https://arxiv.org/pdf/1701.01036.pdf)
 
 * [Neural style transfer - Keras, by François Chollet](https://github.com/keras-team/keras-io/blob/master/examples/generative/md/neural_style_transfer.md)
 
