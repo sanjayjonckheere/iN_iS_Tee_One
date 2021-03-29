@@ -92,7 +92,7 @@ https://github.com/keras-team/keras-applications/blob/master/keras_applications/
 **'BGR'->'RGB'**  
 R(ed)G(reen)B(lue) is the colour model for the sensing, representation, and display of images.  These are the primary colours of light (although light itself is an electromagnetic wave and colourless) and maximises the range perceived by the eyes and brain. Because we are working with screens that emit light instead of pigments, we use RGB.
 
-The model formats the input image as batch size, channels, height and width as a NumPy-array in the form of BGR. Because VVG19 makes use of the ImageNet dataset which uses BGR we set it back to the original, therefore 'BGR'→'RGB' or x = x[:, :, ::-1].
+The model formats the input image as batch size, channels, height and width as a NumPy-array in the form of BGR. Because VGG19 makes use of the ImageNet dataset which uses BGR we set it back to the original, therefore 'BGR'→'RGB' or x = x[:, :, ::-1].
 
 Clip the interval edges to 0 and 255. Red, green and blue use 8 bits each, and they have integer values ranging from 0 to 255. 256³ = 16777216 possible colours. The date type = uint8 = Unsigned Integers of 8 bits (there are only 8 bits of information).
 ```py
