@@ -107,8 +107,8 @@ Clip the interval edges to 0 and 255 otherwise we may pick values between −∞
 The loss/cost is the difference between the original and the generated image.  We can calculate this in different ways (MSE, Euclidean distance, etc.). By minimising the differences of the images we are able to transfer style.
 
 As commented in the code by Mr. Chollet.
->The "style loss" is designed to maintain the style of the reference image in the generated image.  It is based on the gram matrices (which capture style) of >feature maps from the style reference image and from the generated image
->First, we need to define 4 utility functions:
+>The "style loss" is designed to maintain the style of the reference image in the generated image.  It is based on the gram matrices (which capture style) of feature maps from the style reference image and from the generated image
+First, we need to define 4 utility functions:
 
 **1. Gram matrix**: If we want to extract the style of an image we need to compute the style-loss/cost. To do this we make use of the Gram matrix because it is the correlations between feature maps.
 
