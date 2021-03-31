@@ -1,5 +1,5 @@
 # **An introduction into Neural Style Transfer (NST)**
-###### [These are the code examples](https://keras.io/examples/generative/neural_style_transfer/) written by François Chollet, author of Keras.  The base image is by yours truly.
+###### [These are the code examples](https://keras.io/examples/generative/neural_style_transfer/) written by François Chollet, author of Keras.  The base image by yours truly.
 
 ![gthbfnl](https://user-images.githubusercontent.com/72076380/113140256-78ebd280-9228-11eb-8076-523b588afb59.jpg)
 
