@@ -20,7 +20,7 @@ CNN = small computational units that process visual information hierarchically _
 
 Each layer of units = a collection of image filters, each of which extracts a certain feature from the input image.
 
-Thus, the output of a given layer consist of so-called _feature maps_: differently filtered versions of the input image. 
+Thus, the output of a given layer consists of so-called _feature maps_: differently filtered versions of the input image. 
 
 <img width="780" alt="styleBank" src="https://user-images.githubusercontent.com/72076380/111777100-bce6eb00-88aa-11eb-9719-8a1fd3352655.png">
 
@@ -92,7 +92,7 @@ VGG19 is trained with each channel normalised by mean = [103.939, 116.779, 123.6
 ```
 
 **'BGR'->'RGB'**  
-R(ed)G(reen)B(lue) is the colour model for the sensing, representation, and display of images.  These are the primary colours of light (although light itself is an electromagnetic wave and colourless) and maximises the range perceived by the eyes and brain. Because we are working with screens that emit light instead of pigments, we use RGB.
+R(ed)G(reen)B(lue) is the colour model for the sensing, representation, and display of images.  These are the primary colours of light (although light itself is an electromagnetic wave and colourless) and maximise the range perceived by the eyes and brain. Because we are working with screens that emit light instead of pigments, we use RGB.
 
 The model formats the input image as batch size, channels, height and width as a NumPy-array in the form of BGR. VGG19 was trained using Caffe which uses OpenCV to load images and has BGR by default, therefore 'BGR'→'RGB' or x = x[:, :, ::-1]. 
 
@@ -104,13 +104,13 @@ Clip the interval edges to 0 and 255 otherwise we may pick values between −∞
 ```
 
 ## **▻ Compute the style transfer loss**
-The loss/cost is the difference between the original and the generated image.  We can calculate this in different ways (MSE, Euclidean distance, etc.). By minimising the differences of the images we are able to transfer style.
+The loss/cost is the difference between the original and the generated image.  We can calculate this in different ways (MSE, Euclidean distance, etc.). By minimising the differences of the images, we are able to transfer style.
 
 As commented in the code by Mr. Chollet.
->The "style loss" is designed to maintain the style of the reference image in the generated image.  It is based on the gram matrices (which capture style) of feature maps from the style reference image and from the generated image
+>The "style loss" is designed to maintain the style of the reference image in the generated image.  It is based on the gram matrices (which capture style) of feature maps from the style reference image and from the generated image.
 First, we need to define 4 utility functions:
 
-**1. Gram matrix**: If we want to extract the style of an image we need to compute the style-loss/cost. To do this we make use of the Gram matrix because it is the correlations between feature maps.
+**1. Gram matrix**: If we want to extract the style of an image, we need to compute the style-loss/cost. To do this we make use of the Gram matrix because it is the correlations between feature maps.
 
 ![1*HeCcGpmxWZFibgLiZCutag](https://user-images.githubusercontent.com/72076380/111915455-abead500-8a76-11eb-88cf-a50f8b6270c2.png)
 
@@ -286,7 +286,7 @@ def compute_loss(combination_image, base_image, style_reference_image):
 ```
     
 ## ▻ Add a tf.function decorator to loss & gradient computation
-To compile it, and thus make it fast. A decorator enables us to add functionalities to objects without changing the structure. [TensorFlow provides the tf.GradientTape API for automatic differentiation; that is, computing the gradient of a computation with respect to some inputs, usually tf.Variables.](https://www.tensorflow.org/guide/autodiff)
+To compile it and thus make it fast. A decorator enables us to add functionalities to objects without changing the structure. [TensorFlow provides the tf.GradientTape API for automatic differentiation; that is, computing the gradient of a computation with respect to some inputs, usually tf.Variables.](https://www.tensorflow.org/guide/autodiff)
 ```py
 @tf.function
 def compute_loss_and_grads(combination_image, base_image, style_reference_image):
@@ -296,14 +296,14 @@ def compute_loss_and_grads(combination_image, base_image, style_reference_image)
     return loss, grads
 ```
 ## ▻ The training loop
-Repeatedly run vanilla gradient descent steps to minimise the loss, and save the resulting image every 100 iterations.
+Repeatedly run vanilla gradient descent steps to minimise the loss and save the resulting image every 100 iterations.
 We decay the learning rate by 0.96 every 100 steps.
 
 Here, the optimisation algorithm is Stochastic Gradient Descent (SGD). Stochastic = having a random probability distribution or pattern that may be analysed statistically but may not be predicted precisely (oxford-languages). 
 
-It goes through the entire data set and replaces the gradient with an estimate thereof.  The estimates are calculated from a randomly selected subset of that data. This optimiser is in use since the sixties (of the last century). We are optimising pixel values instead of the parameters.
+It goes through the entire data set and replaces the gradient with an estimate thereof.  The estimates are calculated from a randomly selected subset of that data. This optimiser has been in use since the sixties (of the last century). We are optimising pixel values instead of the parameters.
 
-We can of course experiment with different optimisers to see which one gives the most desirable outcome.
+We can, of course, experiment with different optimisers to see which one gives the most desirable outcome.
 
 
 ```py
