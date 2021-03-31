@@ -1,7 +1,8 @@
 # **An introduction into Neural Style Transfer (NST)**
 ###### [These are the code examples](https://keras.io/examples/generative/neural_style_transfer/) written by François Chollet, author of Keras.  The base image is by yours truly.
 
-![Style01](https://user-images.githubusercontent.com/72076380/111522393-8437fc00-875a-11eb-9fdd-b1f3102a30cc.png)
+![gthbfnl](https://user-images.githubusercontent.com/72076380/113140256-78ebd280-9228-11eb-8076-523b588afb59.jpg)
+
 
 NST uses deep neural networks and allows you to transfer the style of 1 (style) image onto another (content) image. Pixel values are used as weights and biases to train the image to generate instead of making and training a model. 
 
