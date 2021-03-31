@@ -120,7 +120,7 @@ Why does the Gram matrix represent artistic style? This is explained in the pape
 
 >We theoretically prove that matching the Gram matrices of the neural activations can be seen as minimising a specific Maximum Mean Discrepancy (MMD) [Gretton et Aal., 2012a]. This reveals that neural style transfer is intrinsically a process of distribution alignment of the neural activations between images.
 
-When we are minimising the style loss we are matching the distribution of features between two images. The gram matrix able to capture that distribution alignment of those feature maps in a given layer.
+When we are minimising the style loss, we are matching the distribution of features between two images. The gram matrix able to capture that distribution alignment of those feature maps in a given layer.
 
 ```py
 def gram_matrix(x):
