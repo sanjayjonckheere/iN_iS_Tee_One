@@ -198,7 +198,7 @@ _**Which keeps the high-level representation of the generated image close to tha
 
 
 
-So let p⃗ and x⃗ be the original image and the image that is generated and ![formula](https://render.githubusercontent.com/render/math?math=P%5El&mode=inline) and ![formula](https://render.githubusercontent.com/render/math?math=F%5El&mode=inline) their respective feature representation in layer ![formula](https://render.githubusercontent.com/render/math?math=l&mode=inline). We then define the squared-error loss between the two feature representations
+So let p⃗ and x⃗ be the original image and the image that is generated and ![formula](https://render.githubusercontent.com/render/math?math=P%5El&mode=inline) and ![formula](https://render.githubusercontent.com/render/math?math=F%5El&mode=inline) their respective feature representation in layer ![formula](https://render.githubusercontent.com/render/math?math=l&mode=inline). We then define the squared-error loss between the two feature representations.
 
 ![formula](https://render.githubusercontent.com/render/math?math=L_%7Bcontent%7D%28%5Cvec%20p%2C%20%5Cvec%20x%2C%20l%29%20%3D%20%5Cfrac%20%7B1%7D%7B2%7D%20%5Csum_%7Bi%2Cj%7D%20%28F_%7Bij%7D%5El%20-%20P_%7Bij%7D%5El%29%5E2&mode=inline)
 
