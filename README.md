@@ -14,7 +14,9 @@ Although it isn't "state of the art" and already used in Photoshop (neural filte
 ## **▻ Excerpts from the research paper.**
 **The key finding of the paper is that the representations of content and style in the Convolutional neural network are separable.**
 
-The class of [Deep Neural Networks](https://arxiv.org/pdf/1605.07678.pdf?source=post_page---------------------------) that are most powerful in image processing tasks are called [Convolutional Neural Networks](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) (CNN or ConvNet). Convolutional comes from the mathematical operation on two functions (f and g) that produces a third function that expresses how the shape of one is modified by the other. It is a linear operation and [convolutional networks are simply neural networks that use convolution in place of general matrixmultiplication in at least one of their layers.](https://www.deeplearningbook.org/contents/convnets.html).
+The class of [Deep Neural Networks](https://arxiv.org/pdf/1605.07678.pdf?source=post_page---------------------------) that are most powerful in image processing tasks are called [Convolutional Neural Networks](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) (CNN or ConvNet). 
+
+Convolutional comes from the mathematical operation on two functions (f and g) that produces a third function that expresses how the shape of one is modified by the other. It is a linear operation and [convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers.](https://www.deeplearningbook.org/contents/convnets.html).
 
 CNN = small computational units that process visual information hierarchically _feed-forward_. These networks care more about the higher layers such as shape and content (the more technical features).
 
