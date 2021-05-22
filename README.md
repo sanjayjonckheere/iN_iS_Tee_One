@@ -86,7 +86,7 @@ Mathematically this can be done by calculating the mean in your images and subtr
 The mean and standard deviation required to standardize pixel values can be calculated from the pixel values in each image only (sample-wise) or across the entire training dataset (feature-wise). 
 
 NumPy allows us to specify the dimensions over which a statistic like the mean, min, and max are calculated via the “axis” argument. 
-[More info here](https://androidkt.com/normalize-mean-subtraction-standard-deviation-zero-center-image-dataset-in-python/)
+[Source.](https://androidkt.com/normalize-mean-subtraction-standard-deviation-zero-center-image-dataset-in-python/)
 
 > [Caffe: will convert the images from RGB to BGR and then will zero-centre each colour channel with respect to the ImageNet dataset without scaling.](
 https://github.com/keras-team/keras-applications/blob/master/keras_applications/imagenet_utils.py)
