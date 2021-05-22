@@ -85,7 +85,7 @@ Zero-centring = shifting the values of the distribution to set the mean = 0. Rem
 Mathematically this can be done by calculating the mean in your images and subtracting each image item with that mean.
 The mean and standard deviation required to standardize pixel values can be calculated from the pixel values in each image only (sample-wise) or across the entire training dataset (feature-wise).
 
-NumPy allows us to specify the dimensions over which a statistic like the mean, min, and max are calculated via the “axis” argument. In this example, we set this to (0,1,2) for the width and height dimensions, which leaves the third dimension or channels. The result is three mean, min, or max for each of the three-channel arrays.
+NumPy allows us to specify the dimensions over which a statistic like the mean, min, and max are calculated via the “axis” argument. 
 
 
 > [Caffe: will convert the images from RGB to BGR and then will zero-centre each colour channel with respect to the ImageNet dataset without scaling.](
