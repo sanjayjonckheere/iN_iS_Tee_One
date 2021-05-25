@@ -122,7 +122,12 @@ First, we need to define 4 utility functions:
 
 ![1*HeCcGpmxWZFibgLiZCutag](https://user-images.githubusercontent.com/72076380/111915455-abead500-8a76-11eb-88cf-a50f8b6270c2.png)
 
-Transpose: In linear algebra, the transpose of a matrix is an operator which flips a matrix over its diagonal; that is, it switches the row and column indices of the matrix A by producing another matrix, often denoted by Aᵀ.
+Transpose: In linear algebra, the transpose of a matrix is an operator which flips a matrix over its diagonal; that is, it switches the row and column indices of the matrix M by producing another matrix, often denoted by Mᵀ.
+
+So we multiply matrix M with its transpose and the values will tell you the similarities between the feature maps or channels.
+
+We do height x width to create a 1 dimension = the number of neurons and activation functions per channel. Then we are multiplying the values of channel 1 with the values of channel 2 to find the similarities between them.
+
 
 Why does the Gram matrix represent artistic style? This is explained in the paper [Demystifying Neural Style Transfer](https://arxiv.org/pdf/1701.01036.pdf) proposed by Yanghao Li, Naiyan Wang, Jiaying Liu and Xiaodi Hou in 2017.
 
