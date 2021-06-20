@@ -11,6 +11,9 @@ It was first published in the paper "[A Neural Algorithm of Artistic Style](http
 
 Although it isn't "state of the art" and already used in Photoshop (neural filters) and mobile apps such as Copista, it is still interesting to see how it works and what can be created by changing parameters and hyper-parameters. 
 
+![iterSktch](https://user-images.githubusercontent.com/72076380/122678229-6359c980-d1d5-11eb-9f30-2e14728656d2.png)
+
+
 ## **▻ Excerpts from the research paper.**
 **The key finding of the paper is that the representations of content and style in the Convolutional neural network are separable.**
 
