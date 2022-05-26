@@ -104,11 +104,11 @@ VGG19 is trained with each channel normalised by mean = [103.939, 116.779, 123.6
 **'BGR'->'RGB'**  
 R(ed)G(reen)B(lue) is the colour model for the sensing, representation, and display of images.  These are the primary colours of light (although light itself is an electromagnetic wave and colourless) and maximise the range perceived by the eyes and brain. Because we are working with screens that emit light instead of pigments, we use RGB.
 
-The model formats the input image as batch size, channels, height and width as a NumPy-array in the form of BGR. VGG19 was trained using Caffe which uses OpenCV to load images and has BGR by default, therefore 'BGR'→'RGB' or x = x[:, :, ::-1]. 
+The model formats the input image as batch size, channels, height and width as a NumPy-array in the form of BGR. VGG19 was trained using Caffe which uses OpenCV to load images and has BGR by default, therefore 'BGR'→'RGB' or x = x[:, :, ::-1] because this is how you reverse it. 
 
 Clip the interval edges to 0 and 255 otherwise we may pick values between −∞ and +∞.  Red, green and blue use 8 bits each, and they have integer values ranging from 0 to 255. 256³ = 16777216 possible colours. The data type = uint8 = Unsigned Integers of 8 bits (there are only 8 bits of information). Unsigned integers are integers without a "-" or "+" assigned to them. They are always non-negative (0 or positive) and we use them if we know that the outcome will always be non-negative.
 ```py
-    x = x[:, :, ::-1]
+    x = x[:, :, ::-1] 
     x = np.clip(x, 0, 255).astype("uint8")
     return x
 ```
