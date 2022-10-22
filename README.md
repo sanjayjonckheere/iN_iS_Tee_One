@@ -154,6 +154,8 @@ Why the dot product? The dot product takes two equal-length sequences of numbers
 
 Let’s take 2 flattened vectors representing features of the input space.  The dot product gives us information about the relation between them.  It shows us how similar they are.
 
+In other words, the closer the 2 vectors are, the smaller the angle and the more similar they are. The smaller the value of the angle, the bigger the cosine (because of trigonometry...), so —>
+
 * The lesser the product = the more different the learned features are.
 * The greater the product = the more correlated the features are.
 
