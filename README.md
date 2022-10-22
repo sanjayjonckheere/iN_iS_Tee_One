@@ -122,7 +122,7 @@ First, we need to define 4 utility functions:
 
 **1. Gram matrix**: If we want to extract the style of an image, we need to compute the style-loss/cost. To do this we make use of the Gram matrix because it is the correlations between feature maps.
 
-The Gram matrix is the multiplication of a matrix with its transpose.
+The Gram matrix is the multiplication (the dot product) of a matrix with its transpose.
 
 ![1*HeCcGpmxWZFibgLiZCutag](https://user-images.githubusercontent.com/72076380/111915455-abead500-8a76-11eb-88cf-a50f8b6270c2.png)
 
